@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  FOR and WHILE loops.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Mariah Mufich.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -216,6 +216,18 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
+    new_list = []
+    while len(new_list) < n:
+        if threshold > math.sqrt(2):
+            for k in range(start, n):
+                new_list = new_list + [k]
+        if math.sin(start) + math.cos(start) > threshold:
+            new_list = new_list + [start]
+        start = start + 1
+
+    return new_list
+
+
 
 
 # ----------------------------------------------------------------------
