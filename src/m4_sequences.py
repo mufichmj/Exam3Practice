@@ -422,7 +422,7 @@ def practice_problem4d(sequence):
         if is_prime(sequence[k]) and is_prime(sequence[k+1]) \
                 and is_prime(sequence[k]) != is_prime(sequence[k + 1]):
             sum = sum + sequence[k]
-            
+
     return sum
 
 # ----------------------------------------------------------------------
