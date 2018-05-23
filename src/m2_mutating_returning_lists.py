@@ -112,7 +112,16 @@ def doubler(list1, list2):
     # ------------------------------------------------------------------
     new_list[]
     for k in range(len(list1)):
-        
+        if list1[k] > 0:
+            new_list[k] = list1[k]*2
+            
+
+        #     if numbers[k] < 0:
+        #         new_list.append(0)
+        #     else:
+        #         new_list.append(numbers[k])
+        #
+        # return new_list
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
