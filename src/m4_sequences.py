@@ -141,6 +141,11 @@ def practice_problem4a(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 minutes.
     ####################################################################
+    new_list = []
+    for k in range(len(sequence)-1):
+        if sequence[k] == sequence[k + 1]:
+            new_list = new_list + [k]
+    return new_list
 
 
 def run_test_practice_problem4b():
@@ -204,6 +209,13 @@ def practice_problem4b(sequence):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    biggest_even = sequence[0]
+    for k in range(0, len(sequence), 2):
+        if sequence[k] > biggest_even:
+            biggest_even = sequence[k]
+
+    return biggest_even
+
 
 
 def run_test_practice_problem4c():
