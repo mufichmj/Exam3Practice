@@ -405,6 +405,7 @@ def practice_problem4d(sequence):
       Given sequence (2, 3, 5, 7, 5, 3, 2)
          -- this function returns 2 + 3 + 5 + 7 + 5 + 3, which is 25
 
+
     Type hints:
       :type sequence: (list | tuple) of int
       :rtype: int
