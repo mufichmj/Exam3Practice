@@ -35,6 +35,21 @@ def run_test_zero_changer():
     #   Try do do some unexpected things like empty lists or an empty tuple.
     # ------------------------------------------------------------------
 
+    # Test 2:
+    test2 = ([3, 4, 5, 0], [0, 0, 2, 4, 5])
+    expected = ([3, 4, 5, 1], [2, 3, 2, 4, 5])
+    zero_changer(test2)
+    print("Test 2")
+    print('Expected:', expected)
+    print("Actual:", test2)
+
+    # Test 3:
+    test3 = ([3, 4, 5, 0], [0, 2, 2, 4, 0])
+    expected = ([3, 4, 5, 1], [2, 2, 2, 4, 3])
+    zero_changer(test3)
+    print("Test 2")
+    print('Expected:', expected)
+    print("Actual:", test3)
 
 def zero_changer(tuple_of_lists):
     """
@@ -69,7 +84,18 @@ def zero_changer(tuple_of_lists):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
+    # for k in range(len(tuple_of_lists)):
+    #     if tuple_of_lists[k] == 0:
+    #         for j in range(k):
+    #             tuple_of_lists[k] = (j + 1)
 
+    for k in range(len(tuple_of_lists) - 1, -1, -1):
+        if tuple_of_lists[k] == 0:
+            tuple_of_lists[k] = k + 1
+
+            # for k in range(len(numbers)):
+            #     if numbers[k] < 0:
+            #         numbers[k] = 0
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
