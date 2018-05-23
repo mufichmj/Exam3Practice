@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  MUTATING  and  RETURNING-NEW  LISTS.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Mariah Mufich.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -110,7 +110,9 @@ def doubler(list1, list2):
     #    DIFFICULTY:      4
     #    TIME ESTIMATE:   5 minutes.
     # ------------------------------------------------------------------
-
+    new_list[]
+    for k in range(len(list1)):
+        
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
