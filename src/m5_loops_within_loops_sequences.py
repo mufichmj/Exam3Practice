@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  LOOPS WITHIN LOOPS in SEQUENCES-OF-SUBSEQUENCES problems.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Mariah Mufich.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -118,7 +118,13 @@ def integers(sequence_of_sequences):
     #    DIFFICULTY:      6
     #    TIME ESTIMATE:  10 minutes.
     # ------------------------------------------------------------------
-
+    new_list = []
+    for k in range(len(sequence_of_sequences)):
+        sub_seq = sequence_of_sequences[k]
+        for j in range(len(sub_seq)):
+            if type(sub_seq[j]) is int:
+                new_list = new_list + [sub_seq[j]]
+    return new_list
 
 def run_test_big_letters():
     """ Tests the    big_letters    function. """
@@ -211,7 +217,14 @@ def big_letters(sequence_of_sequences):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  12 minutes.
     # ------------------------------------------------------------------
-
+    new_string = ""
+    for k in range(len(sequence_of_sequences)):
+        if type(sequence_of_sequences[k]) is str:
+            sub_seq = sequence_of_sequences[k]
+            for j in range(len(sub_seq)):
+                if sub_seq[j].isupper():
+                    new_string = new_string + sub_seq[j]
+    return new_string
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
