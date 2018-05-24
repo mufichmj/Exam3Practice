@@ -121,7 +121,6 @@ def hourglass(window, n, point, radius, color):
             circle_below.fill_color = color
             circle_below.attach_to(window)
 
-
             start1 = rg.Point(x_above - radius, y_above)
             end1 = rg.Point(x_above + radius, y_above)
             line1 = rg.Line(start1, end1)
@@ -131,7 +130,6 @@ def hourglass(window, n, point, radius, color):
             end2 = rg.Point(x_below + radius, y_below)
             line2 = rg.Line(start2, end2)
             line2.attach_to(window)
-
 
             x_above = x_above + radius * 2
             x_below = x_below - radius * 2
