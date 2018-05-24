@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  LOOPS WITHIN LOOPS in 2D GRAPHICS problems.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Mariah Mufich.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -101,6 +101,46 @@ def hourglass(window, n, point, radius, color):
     #    DIFFICULTY:      8
     #    TIME ESTIMATE:  25 minutes (warning: this problem is challenging)
     # ------------------------------------------------------------------
+    circle = rg.Circle(point, radius)
+    orig_x = point.x
+    y_above = circle.center.y
+    y_below = circle.center.y
+
+    for k in range(n):
+        x_above = orig_x - radius * k
+        x_below = orig_x + radius * k
+
+        for j in range(k + 1):
+            center1 = rg.Point(x_above, y_above)
+            circle_above = rg.Circle(center1, radius)
+            circle_above.fill_color = color
+            circle_above.attach_to(window)
+
+            center2 = rg.Point(x_below, y_below)
+            circle_below = rg.Circle(center2, radius)
+            circle_below.fill_color = color
+            circle_below.attach_to(window)
+
+
+            start1 = rg.Point(x_above - radius, y_above)
+            end1 = rg.Point(x_above + radius, y_above)
+            line1 = rg.Line(start1, end1)
+            line1.attach_to(window)
+
+            start2 = rg.Point(x_below - radius, y_below)
+            end2 = rg.Point(x_below + radius, y_below)
+            line2 = rg.Line(start2, end2)
+            line2.attach_to(window)
+
+
+            x_above = x_above + radius * 2
+            x_below = x_below - radius * 2
+
+        y_above = y_above - radius * 2
+        y_below = y_below + radius * 2
+
+    window.render()
+
 
 
 def run_test_many_hourglasses():
